@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/services/" />
+  <Folder Name="/src/services/identity/">
+    <Project Path="src/services/identity/FlowCart.Services.Identity.API/FlowCart.Services.Identity.API.csproj" />
+    <Project Path="src/services/identity/FlowCart.Services.Identity.Application/FlowCart.Services.Identity.Application.csproj" />
+    <Project Path="src/services/identity/FlowCart.Services.Identity.Domain/FlowCart.Services.Identity.Domain.csproj" />
+    <Project Path="src/services/identity/FlowCart.Services.Identity.Infrastructure/FlowCart.Services.Identity.Infrastructure.csproj" />
+  </Folder>
+</Solution>

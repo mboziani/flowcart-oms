@@ -1,0 +1,6 @@
+@FlowCart.Services.Identity.API_HostAddress = http://localhost:5183
+
+GET {{FlowCart.Services.Identity.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

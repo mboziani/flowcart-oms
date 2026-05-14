@@ -1,0 +1,44 @@
+# .gitignore for FlowCart OMS
+
+## .NET Core / Visual Studio
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.doccache
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.doccache
+*.cache
+*.pubxml
+*.publish.xml
+
+## Docker
+.docker/
+docker-compose.override.yml*
+
+## User Secrets & Environment
+appsettings.Development.json
+.env
+.env.*
+!.env.example
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Test results
+TestResults/
+*.trx
+
+## Tools
+.nupkg
+*.nupkg
+.tools/
+
+## Project Documentation
+docs/
