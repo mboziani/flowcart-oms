@@ -1,6 +1,12 @@
 <Solution>
   <Folder Name="/src/" />
   <Folder Name="/src/services/" />
+  <Folder Name="/src/services/catalog/">
+    <Project Path="src/services/catalog/FlowCart.Services.Catalog.API/FlowCart.Services.Catalog.API.csproj" />
+    <Project Path="src/services/catalog/FlowCart.Services.Catalog.Application/FlowCart.Services.Catalog.Application.csproj" />
+    <Project Path="src/services/catalog/FlowCart.Services.Catalog.Domain/FlowCart.Services.Catalog.Domain.csproj" />
+    <Project Path="src/services/catalog/FlowCart.Services.Catalog.Infrastructure/FlowCart.Services.Catalog.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/src/services/identity/">
     <Project Path="src/services/identity/FlowCart.Services.Identity.API/FlowCart.Services.Identity.API.csproj" />
     <Project Path="src/services/identity/FlowCart.Services.Identity.Application/FlowCart.Services.Identity.Application.csproj" />
