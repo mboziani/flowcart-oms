@@ -13,4 +13,9 @@
     <Project Path="src/services/identity/FlowCart.Services.Identity.Domain/FlowCart.Services.Identity.Domain.csproj" />
     <Project Path="src/services/identity/FlowCart.Services.Identity.Infrastructure/FlowCart.Services.Identity.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/services/" />
+  <Folder Name="/tests/services/catalog/">
+    <Project Path="tests/services/catalog/FlowCart.Services.Catalog.ArchitectureTests/FlowCart.Services.Catalog.ArchitectureTests.csproj" />
+  </Folder>
 </Solution>

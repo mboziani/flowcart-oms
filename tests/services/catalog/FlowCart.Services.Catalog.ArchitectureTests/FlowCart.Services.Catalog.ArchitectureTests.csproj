@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="FluentAssertions" Version="8.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="NetArchTest.eNhancedEdition" Version="1.4.5" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\services\catalog\FlowCart.Services.Catalog.Domain\FlowCart.Services.Catalog.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\src\services\catalog\FlowCart.Services.Catalog.Application\FlowCart.Services.Catalog.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\src\services\catalog\FlowCart.Services.Catalog.Infrastructure\FlowCart.Services.Catalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\..\src\services\catalog\FlowCart.Services.Catalog.API\FlowCart.Services.Catalog.API.csproj" />
+  </ItemGroup>
+
+</Project>
