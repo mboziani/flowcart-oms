@@ -42,10 +42,3 @@ TestResults/
 
 ## Project Documentation
 docs/
-
-## UI Dependencies
-node_modules/
-.turbo/
-.next/
-dist/
-build-ui/

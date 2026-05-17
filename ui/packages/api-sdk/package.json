@@ -1,0 +1,14 @@
+{
+  "name": "@flowcart/api-sdk",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "dependencies": {
+    "@flowcart/types": "workspace:*",
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}

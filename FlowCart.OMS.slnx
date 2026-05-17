@@ -13,9 +13,19 @@
     <Project Path="src/services/identity/FlowCart.Services.Identity.Domain/FlowCart.Services.Identity.Domain.csproj" />
     <Project Path="src/services/identity/FlowCart.Services.Identity.Infrastructure/FlowCart.Services.Identity.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/src/services/inventory/">
+    <Project Path="src/services/inventory/FlowCart.Services.Inventory.API/FlowCart.Services.Inventory.API.csproj" />
+    <Project Path="src/services/inventory/FlowCart.Services.Inventory.Application/FlowCart.Services.Inventory.Application.csproj" />
+    <Project Path="src/services/inventory/FlowCart.Services.Inventory.Domain/FlowCart.Services.Inventory.Domain.csproj" />
+    <Project Path="src/services/inventory/FlowCart.Services.Inventory.Infrastructure/FlowCart.Services.Inventory.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/tests/" />
   <Folder Name="/tests/services/" />
   <Folder Name="/tests/services/catalog/">
     <Project Path="tests/services/catalog/FlowCart.Services.Catalog.ArchitectureTests/FlowCart.Services.Catalog.ArchitectureTests.csproj" />
+  </Folder>
+  <Folder Name="/tests/services/inventory/">
+    <Project Path="tests/services/inventory/FlowCart.Services.Inventory.ArchitectureTests/FlowCart.Services.Inventory.ArchitectureTests.csproj" />
+    <Project Path="tests/services/inventory/FlowCart.Services.Inventory.UnitTests/FlowCart.Services.Inventory.UnitTests.csproj" />
   </Folder>
 </Solution>
