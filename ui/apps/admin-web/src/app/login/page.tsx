@@ -37,16 +37,30 @@ export default function LoginPage() {
   const onSubmit = async (data: LoginFormValues) => {
     setIsLoading(true);
     
-    // Simulate API call to Identity Service
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    setAuth(
-      { id: "1", email: data.email, role: "Administrator" },
-      "mock-jwt-token"
-    );
-    
-    setIsLoading(false);
-    router.push("/dashboard");
+    try {
+      const response = await fetch("http://localhost:5220/api/identity/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: data.email, password: data.password })
+      });
+
+      if (!response.ok) {
+        throw new Error("Invalid credentials");
+      }
+
+      const result = await response.json();
+      
+      setAuth(
+        { id: result.userName, email: result.email, role: "User" },
+        result.token
+      );
+      
+      router.push("/dashboard");
+    } catch (error: any) {
+      console.error("Login failed:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

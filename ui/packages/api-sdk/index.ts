@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Product, CreateProductRequest, Warehouse, CreateWarehouseRequest, Stock, AddStockRequest } from "@flowcart/types";
+import { Product, CreateProductRequest, Warehouse, CreateWarehouseRequest, Stock, AddStockRequest, Order, CreateOrderCommand } from "@flowcart/types";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"; // Our Gateway URL
 
@@ -56,6 +56,14 @@ export const inventoryApi = {
   },
   addStock: async (request: AddStockRequest) => {
     const { data } = await apiClient.post<string>("/inventory/stock/add", request);
+    return data;
+  },
+};
+
+// --- Order Service ---
+export const orderApi = {
+  createOrder: async (command: CreateOrderCommand) => {
+    const { data } = await apiClient.post<Order>("/orders", command);
     return data;
   },
 };

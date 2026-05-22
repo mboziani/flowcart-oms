@@ -44,3 +44,34 @@ export interface AddStockRequest {
   quantity: number;
   reason: string;
 }
+
+export interface OrderItem {
+  id: string;
+  productId: string;
+  productName: string;
+  unitPrice: number;
+  quantity: number;
+  totalPrice: number;
+}
+
+export interface Order {
+  id: string;
+  userId: string;
+  shippingAddress: string;
+  status: string;
+  totalAmount: number;
+  items: OrderItem[];
+}
+
+export interface CreateOrderItemCommand {
+  productId: string;
+  productName: string;
+  unitPrice: number;
+  quantity: number;
+}
+
+export interface CreateOrderCommand {
+  userId: string;
+  shippingAddress: string;
+  items: CreateOrderItemCommand[];
+}

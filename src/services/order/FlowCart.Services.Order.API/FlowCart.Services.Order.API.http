@@ -1,0 +1,6 @@
+@FlowCart.Services.Order.API_HostAddress = http://localhost:5252
+
+GET {{FlowCart.Services.Order.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

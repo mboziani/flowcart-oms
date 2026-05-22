@@ -52,4 +52,32 @@ public class IdentityService : IIdentityService
             UserName: domainUser.UserName
         );
     }
+
+    public async Task<AuthResponse> LoginAsync(string email, string password)
+    {
+        var existingUser = await _userManager.FindByEmailAsync(email);
+        if (existingUser == null)
+            throw new Exception("Invalid credentials.");
+
+        var isValidPassword = await _userManager.CheckPasswordAsync(existingUser, password);
+        if (!isValidPassword)
+            throw new Exception("Invalid credentials.");
+
+        var domainUser = new ApplicationUser
+        {
+            Id = existingUser.Id,
+            FirstName = existingUser.FirstName,
+            LastName = existingUser.LastName,
+            Email = existingUser.Email!,
+            UserName = existingUser.UserName!
+        };
+
+        return new AuthResponse(
+            Token: _tokenService.GenerateJwtToken(domainUser),
+            RefreshToken: _tokenService.GenerateRefreshToken(),
+            ExpiresAt: DateTime.UtcNow.AddMinutes(60),
+            Email: domainUser.Email,
+            UserName: domainUser.UserName
+        );
+    }
 }
